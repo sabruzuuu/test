@@ -17,6 +17,9 @@ public class TeleOp extends LinearOpMode {
     private boolean holding = false;
     private boolean clawClosed = false;
     private boolean squarePressed = false;
+    private boolean rumble30 = false;
+    private boolean rumble20 = false;
+    private boolean rumble10 = false;
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -88,6 +91,25 @@ public class TeleOp extends LinearOpMode {
                 }
             }
             squarePressed = squareCurrent;
+            //RUMBLE CONTROLLER CODE
+            if (!rumble30 && getRuntime() >= 91.5)
+            {
+                gamepad1.rumbleBlips(1);
+                gamepad2.rumbleBlips(1);
+                rumble30 = true;
+            }
+            if (!rumble20 && getRuntime() >= 101.5)
+            {
+                gamepad1.rumbleBlips(2);
+                gamepad2.rumbleBlips(2);
+                rumble20 = true;
+            }
+            if (!rumble10 && getRuntime() >= 111.5)
+            {
+                gamepad1.rumbleBlips(3);
+                gamepad2.rumbleBlips(3);
+                rumble10 = true;
+            }
 
             //DIFFERENTIAL CLAW CODE
             if (gamepad2.triangle){
