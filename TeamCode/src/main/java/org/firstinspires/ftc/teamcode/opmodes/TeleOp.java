@@ -47,7 +47,7 @@ public class TeleOp extends LinearOpMode {
             double x = gamepad1.left_stick_x;
             double y = -gamepad1.left_stick_y;
             double turn = gamepad1.right_stick_x;
-            double slowfactor = slowmode ? 0.35 : 1.0;
+            double slowfactor = slowmode ? 0.25 : 1.0;
 
             double vd = Math.hypot(x, y) * slowfactor;
             double td = Math.atan2(y, x);
