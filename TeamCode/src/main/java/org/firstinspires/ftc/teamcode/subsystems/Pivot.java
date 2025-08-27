@@ -88,12 +88,12 @@ public class Pivot {
 
     //MANUAL COMMANDS
     public void pivotUp () {
-        leftPivotMotor.setPower(0.54);
-        rightPivotMotor.setPower(0.54);
+        leftPivotMotor.setPower(0.53);
+        rightPivotMotor.setPower(0.53);
     }
     public void pivotDown () {
-        leftPivotMotor.setPower(-0.54);
-        rightPivotMotor.setPower(-0.54);
+        leftPivotMotor.setPower(-0.40);
+        rightPivotMotor.setPower(-0.40);
     }
     public void pivotStop () {
         leftPivotMotor.setPower(0);
